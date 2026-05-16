@@ -79,7 +79,7 @@ I added `role="progressbar"` along with `aria-valuenow`, `aria-valuemax`, and `a
 I plan to keep improving my frontend skills by focusing on:
 
 - **CSS architecture:** Deepen my knowledge of BEM and explore utility-first frameworks like Tailwind CSS.
-- **Accessibility:**Test ARIA implementations with real screen readers (NVDA, VoiceOver).
+- **Accessibility:** Test ARIA implementations with real screen readers (NVDA, VoiceOver).
 - **JavaScript interactivity:** Build more dynamic components (modals, carousels) with vanilla JS before moving to frameworks.
 - **Performance:** Learn about CSS containment (contain) and optimizing background images.
 
