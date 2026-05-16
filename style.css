@@ -69,14 +69,16 @@ img {
   max-width: 100%;
 }
 
+/* ===== CARD ===== */
 .card {
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
   width: 100%;
-  max-width: 400px;
+  max-width: var(--card-max-width-mobile);
 }
 
+/* ===== HEADER ===== */
 .card__header {
   padding: var(--space-5xl);
   border-radius: 10px 100px 10px 10px;
@@ -103,6 +105,7 @@ img {
   background-color: var(--blue-950);
 }
 
+/* ===== STORAGE SECTION ===== */
 .storage {
   position: relative;
   padding: var(--space-4xl) var(--space-4xl) var(--space-6xl);
@@ -117,6 +120,7 @@ img {
   font-weight: 400;
 }
 
+/* ===== BUBBLE ===== */
 .bubble {
   position: absolute;
   inset: auto auto 0 50%;
@@ -131,8 +135,8 @@ img {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  text-transform: uppercase;
   color: var(--grayish-blue);
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 0.9rem;
 }
@@ -143,11 +147,12 @@ img {
   font-size: var(--space-5xl);
 }
 
+/* ===== PROGRESS BAR ===== */
 .progress-bar {
   height: var(--space-xl);
   margin-bottom: var(--space-sm);
   padding: 3px;
-  border-radius: 0.7rem;
+  border-radius: calc(var(--space-xl) / 2);
   background-color: var(--blue-950);
 }
 
@@ -178,6 +183,7 @@ img {
   font-size: 0.9rem;
 }
 
+/* ===== DESKTOP ===== */
 @media screen and (min-width: 1024px) {
   body {
     background: var(--blue-950) url("./images/bg-desktop.png") no-repeat bottom left / 100% auto;
@@ -185,7 +191,7 @@ img {
 
   .card {
     flex-direction: row;
-    max-width: 920px;
+    max-width: var(--card-max-width-desktop);
     gap: var(--space-3xl);
   }
 
