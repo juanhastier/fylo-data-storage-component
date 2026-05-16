@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Fylo data storage component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <main class="card">
+    <header class="card__header">
+      <img src="./images/logo.svg" alt="Fylo" class="logo">
+
+      <ul class="actions">
+        <li class="actions__item">
+          <button type="button" class="actions__btn" aria-label="Create document">
+            <img src="./images/icon-document.svg" alt="" role="presentation" aria-hidden="true">
+          </button>
+        </li>
+
+        <li>
+          <button type="button" class="actions__btn" aria-label="Create folder">
+            <img src="./images/icon-folder.svg" alt="" role="presentation" aria-hidden="true">
+          </button>
+        </li>
+
+        <li>
+          <button type="button" class="actions__btn" aria-label="Upload">
+            <img src="./images/icon-upload.svg" alt="" role="presentation" aria-hidden="true">
+          </button>
+        </li>
+      </ul>
+    </header>
+
+    <section class="storage">
+      <h1 class="storage__title">You’ve used <strong class="storage__used">815 GB</strong> of your storage</h1>
+
+      <div class="bubble">
+        <p class="bubble__text"><strong class="bubble__left">185</strong> GB Left</p>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="progress-bar" role="progressbar" aria-valuenow="815" aria-valuemax="1000" aria-valuetext="81.5 percent used">
+        <div class="progress-bar__fill"></div>
+      </div>
+
+      <div class="storage__limits">
+        <span>0 GB</span>
+        <span>1000 GB</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
