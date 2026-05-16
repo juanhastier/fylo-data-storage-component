@@ -1,0 +1,220 @@
+/* ===== RESET ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIABLES ===== */
+:root {
+  /* Gradient */
+  --gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+
+  /* Colors */
+  --blue-200: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --blue-850: hsl(228, 56%, 26%);
+  --blue-950: hsl(229, 57%, 11%);
+
+  /* Spacing */
+  --space-sm: 0.8rem;
+  --space-md: 1rem;
+  --space-lg: 1.2rem;
+  --space-xl: 1.4rem;
+  --space-2xl: 1.8rem;
+  --space-3xl: 2rem;
+  --space-4xl: 2.2rem;
+  --space-5xl: 2.8rem;
+  --space-6xl: 3.6rem;
+
+  /* Layout */
+  --card-max-width-mobile: 400px;
+  --card-max-width-desktop: 920px;
+}
+
+/* ===== GLOBALS ===== */
+html {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: var(--space-2xl);
+  background: var(--blue-950) url("./images/bg-mobile.png") no-repeat top left / cover;
+  color: var(--blue-200);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  width: 100%;
+  max-width: 400px;
+}
+
+.card__header {
+  padding: var(--space-5xl);
+  border-radius: 10px 100px 10px 10px;
+  background-color: var(--blue-850);
+}
+
+.logo {
+  margin-bottom: 2.4rem;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.actions__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0.6rem;
+  border-radius: 10px;
+  background-color: var(--blue-950);
+}
+
+.storage {
+  position: relative;
+  padding: var(--space-4xl) var(--space-4xl) var(--space-6xl);
+  border-radius: 10px;
+  background-color: var(--blue-850);
+  text-align: center;
+}
+
+.storage__title {
+  margin-bottom: var(--space-md);
+  font-size: var(--space-md);
+  font-weight: 400;
+}
+
+.bubble {
+  position: absolute;
+  inset: auto auto 0 50%;
+  width: max-content;
+  padding: var(--space-md) var(--space-3xl);
+  border-radius: 10px;
+  transform: translate(-50%, 50%);
+  background-color: white;
+}
+
+.bubble__text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  color: var(--grayish-blue);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.bubble__left {
+  color: var(--blue-950);
+  font-weight: 700;
+  font-size: var(--space-5xl);
+}
+
+.progress-bar {
+  height: var(--space-xl);
+  margin-bottom: var(--space-sm);
+  padding: 3px;
+  border-radius: 0.7rem;
+  background-color: var(--blue-950);
+}
+
+.progress-bar__fill {
+  position: relative;
+  height: 100%;
+  width: 81.5%;
+  border-radius: 0.5rem;
+  background-image: var(--gradient);
+}
+
+.progress-bar__fill::after {
+  position: absolute;
+  inset: 50% 3px auto auto;
+  display: block;
+  content: '';
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background-color: var(--blue-200);
+}
+
+.storage__limits {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background: var(--blue-950) url("./images/bg-desktop.png") no-repeat bottom left / 100% auto;
+  }
+
+  .card {
+    flex-direction: row;
+    max-width: 920px;
+    gap: var(--space-3xl);
+  }
+
+  .card__header {
+    flex-basis: 40%;
+  }
+
+  .storage {
+    flex-basis: 60%;
+    align-self: flex-end;
+    padding: var(--space-5xl);
+    text-align: left;
+  }
+
+  .bubble {
+    inset: -3.2rem var(--space-5xl) auto auto;
+    transform: none;
+    z-index: 10;
+  }
+
+  .bubble::after {
+    position: absolute;
+    inset: 100% 0 auto auto;
+    display: block;
+    content: '';
+    width: var(--space-3xl);
+    height: var(--space-3xl);
+    background-color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    transform: translateY(-10px);
+  }
+}
